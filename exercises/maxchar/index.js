@@ -12,30 +12,32 @@ function maxChar(str) {
     map[char] = map[char] ? map[char] + 1 : 1;
   });
 
-  let maxUsedChar = 0;
+  let maxUsedChar = '';
+  let maxTimesUsed = 0;
   Object.keys(map).forEach(key => {
     if (map[key] > maxUsedChar) {
+      maxTimesUsed = map[key];
       maxUsedChar = key;
     }
   });
   return maxUsedChar
 }
 
-// Solution 2
+// // Solution 2
 function maxChar(str) {
   const map = {};
   for (let char of str) {
     map[char] = map[char] ? map[char] + 1 : 1;
   }
-  let mostUsedChar = '';
+  let maxUsedChar = '';
   let maxTimesUsed = 0;
   Object.keys(map).forEach(key => {
     if (map[key] > maxTimesUsed) {
       maxTimesUsed = map[key];
-      mostUsedChar = key;
+      maxUsedChar = key;
     }
   });
-  return mostUsedChar
+  return maxUsedChar
 }
 
 // Solution 3
