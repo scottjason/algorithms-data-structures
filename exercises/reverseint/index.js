@@ -15,28 +15,28 @@ function reverseInt(n) {
 }
 
 // Solution 2
-// function reverseInt(n) {
-//   let output;
-//   if (n === 0) {
-//     return n;
-//   } else if (n > 0) {
-//     output = n
-//       .toString()
-//       .split('')
-//       .reduce((acc, char) => {
-//         return char + acc;
-//       }, '');
-//     return parseInt(output);
-//   } else {
-//     let tmp = Math.abs(n);
-//     output = tmp
-//       .toString()
-//       .split('')
-//       .reduce((acc, char) => {
-//         return char + acc;
-//       }, '');
-//     return -Math.abs(output);
-//   }
-// }
+function reverseInt(n) {
+  let output;
+  if (n === 0) {
+    return n;
+  } else if (n > 0) {
+    output = n
+      .toString()
+      .split('')
+      .reduce((acc, char) => {
+        return char + acc;
+      }, '');
+    return parseInt(output);
+  } else {
+    let tmp = Math.abs(n);
+    output = tmp
+      .toString()
+      .split('')
+      .reduce((acc, char) => {
+        return char + acc;
+      }, '');
+    return -Math.abs(output);
+  }
+}
 
 module.exports = reverseInt;
