@@ -23,7 +23,7 @@ function maxChar(str) {
   return maxUsedChar
 }
 
-// // Solution 2
+// Solution 2
 function maxChar(str) {
   const map = {};
   for (let char of str) {
